@@ -1,0 +1,27 @@
+@tailwind preflight;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import "~prismjs/themes/prism-twilight.css";
+
+.container {
+  @apply .mx-auto .p-4;
+  width: 92%;
+}
+
+.content p {
+  @apply .leading-loose .mb-2;
+}
+
+@screen md {
+  .container {
+    @apply .pr-24;
+    width: 748px;
+  }
+
+  .content {
+    @apply .pl-28;
+  }
+}

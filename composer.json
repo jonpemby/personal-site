@@ -1,0 +1,16 @@
+{
+    "name": "jonpemby/personal",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathon Pemberton",
+            "email": "jonpemby@icloud.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "tightenco/jigsaw": "^1.3"
+    }
+}
