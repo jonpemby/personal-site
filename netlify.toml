@@ -1,7 +1,7 @@
 [build]
 
-command = "npm run production"
-public = "build_production"
+command = "vendor/bin/jigsaw build production"
+publish = "build_production"
 
 [build.environment]
 
