@@ -45,6 +45,55 @@
 
 </section>
 
+<article class="my-8">
+    <p>I try to learn a new language every year (if not every six months) and build something with it.</p>
+<p>I tinkered around with Kotlin on the online playground and found it to be really fun.</p>
+<p>I wrote a simple <code>parseInt</code> function. I realize there's probably a library function for this but it was something easy to do.</p>
+<p>Here's my function:</p>
+<pre><code class="language-kotlin">fun parseInt(s: String): Int {
+    var num = 0
+    var j = 1
+    var i = s.length - 1
+
+    while (i &gt;= 0) {
+        val c = s[i].toInt()
+
+        if (c &lt; 48 || c &gt; 58) {
+            i -= 1
+            continue
+        }
+
+        num += powBase10(j - 1) * (c - 48)
+        i -= 1
+        j += 1
+    }
+
+    return num
+}</code></pre>
+<p>Basically we're traversing the string from the right to left and ignoring any characters that are not numeric.</p>
+<p>Once we hit the numeric part of the string we add the power of ten it belongs in times the 'numeric' value of the character.</p>
+<p>Here's my <code>powBase10</code> implementation (I didn't implement negative powers):</p>
+<pre><code class="language-kotlin">fun powBase10(a: Int): Int {
+    if (a &lt; 0) {
+        return 10
+    }
+
+    if (a == 0) {
+        return 1
+    }
+
+    return 10 * powBase10(a - 1)
+}</code></pre>
+<p>All in all I found the experience of using Kotlin to be pretty fun. I would love to do a project with it sometime!</p></article>
+
+<footer>
+    
+    
+    <section>
+        <a class="no-underline text-black font-bold" href="/">Back Home</a>
+    </section>
+</footer>
+
             </article>
         </main>
 
